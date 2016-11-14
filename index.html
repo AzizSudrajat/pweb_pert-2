@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Belajar JS DOM</title>
+    <script type="text/javascript">
+      function tekan(){
+        var a = "Nama Depan";
+        document.getElementById('iniid').innerHTML = a ;
+        document.getElementById('iniid').style.color = "red";
+
+        var b = document.getElementsByClassName('iniclass');
+        for (i = 0; i < b.length; i++) {
+          b[i].innerHTML = "Nama Belakang";
+        }
+
+        var c = document.getElementsByTagName('p');
+        for (i = 0; i < c.length; i++) {
+          c[i].innerHTML = "Paragraf Berubah Gan !!";
+        }
+
+        var c = document.getElementsByTagName('p');
+        for (i = 0; i < c.length; i++) {
+          c[i].style.backgroundColor = "blue";
+        }
+
+        var d = document.querySelectorAll('h2.inih2');
+        for (i = 0; i < d.length; i++) {
+          d[i].innerHTML = "H2 Sudah Berubah Gaann !!";
+        }
+
+        var d = document.querySelectorAll('h2.inih2');
+        for (i = 0; i < d.length; i++) {
+          d[i].style.color = "green";
+        }
+      }
+
+      function changeText(id){
+        id.innerHTML = "Text Berubah Gaann !!!"
+      }
+    </script>
+  </head>
+  <body>
+    <div id="iniid">Ini ID </div>
+    <div class="iniclass">Ini CLASS Satu</div>
+    <div class="iniclass">Ini CLASS Kedua</div>
+    <p> Ini Paragraf Kesatu</p>
+    <p> Ini Paragraf Kedua</p>
+
+    <h2 class="inih2">Ini H2 Satu</h2>
+    <h2 class="inih2">Ini H2 Dua</h2>
+    <h2 class="inih2">Ini H2 Tiga</h2>
+    <h3 onclick="changeText(this)">Ini H3 Kesatu</h3>
+    <h3 onclick="this,innerHTML='Berubah Broo !!'">Ini H3 Kedua</h3>
+    <input type="button" name="name" value="Tekan" onclick="tekan()">
+    <a href="index2.html">Index 2 Pindah</a>
+  </body>
+</html>

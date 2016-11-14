@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Belajar JS Even</title>
+    <script type="text/javascript">
+      function dekat(obj){
+        obj.innerHTML = "Kursor Mendekat";
+      }
+
+      function jauh(obj){
+        obj.innerHTML = "Kursor Menjauh";
+      }
+
+      function klik(obj){
+        obj.style.backgroundColor = "red";
+        obj.innerHTML = "Klik Berhasil";
+      }
+
+      function setelahklik(obj){
+        obj.style.backgroundColor = "green";
+        obj.innerHTML = "Ko Dilepas !!!"
+      }
+    </script>
+  </head>
+  <body>
+    <!-- ini div satu -->
+    <div onmouseover="dekat(this)" onmouseout="jauh(this)" style="background-color:blue; width:120px; padding:40px;">Klik Dong!!</div>
+
+    <!-- ini div 2 -->
+    <div onmousedown="klik(this)" onmouseup="setelahklik(this)" style="background-color:blue; width:120px; padding:40px; margin-top:10px;">Klik Ini Juga Dong!!</div>
+    <a href="index3.html">Index 3 Pindah</a>
+  </body>
+</html>

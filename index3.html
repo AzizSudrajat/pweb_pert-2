@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Belajar JS Alert</title>
+  </head>
+  <body>
+    <div id="iniid">Ini ID</div>
+    <div id="nama">Ini ID Prompt</div>
+    <input type="button" id="tekan" value="Alert EventListener">
+    <input type="button" name="name" value="Alert Confirm" onclick="konfirm()">
+    <input type="button" name="name" value="Alert Prompt" onclick="masukan()">
+    <script type="text/javascript">
+      document.getElementById('tekan').addEventListener("click", text);
+
+      function text(){
+        alert("Hello Dunia");
+      }
+
+      function konfirm(){
+        var x;
+        if (confirm("Tekan Antara Kedua nya") == true) {
+          x = "Benar Gaannn !!";
+        }else {
+          x = "Cancel Gaann !!";
+        }
+        document.getElementById('iniid').innerHTML = x;
+      }
+
+      function masukan(){
+        var nama = prompt("Masukan nama Anda : ");
+        document.getElementById('nama').innerHTML = nama + " Selamat Belajar JavaScript";
+      }
+    </script>
+  </body>
+</html>
